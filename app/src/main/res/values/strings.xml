@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Habari2</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello am Default</string>
+    <string name="seach_news">Seach News</string>
+    <string name="saved_news">Saved News</string>
+    <string name="breaking_news">Breaking News</string>
+</resources>

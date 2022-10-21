@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigationgraph"
+    app:startDestination="@id/breaking_News">
+    <fragment
+        android:id="@+id/savedNews"
+        android:name="com.example.habari2.ui.fragments.SavedNews"
+        android:label="SavedNews" >
+        <action
+            android:id="@+id/action_savedNews_to_articleFragment"
+            app:destination="@id/articleFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@animator/nav_default_pop_exit_anim"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/search_News"
+        android:name="com.example.habari2.ui.fragments.Search_News"
+        android:label="Search_News" >
+        <action
+            android:id="@+id/action_search_News_to_articleFragment"
+            app:destination="@id/articleFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@animator/nav_default_pop_exit_anim"/>
+    </fragment>
+    <fragment
+        android:id="@+id/articleFragment"
+        android:name="com.example.habari2.ui.fragments.articleFragment"
+        android:label="fragment_article"
+        tools:layout="@layout/fragment_article" />
+    <fragment
+        android:id="@+id/breaking_News"
+        android:name="com.example.habari2.ui.fragments.Breaking_News"
+        android:label="fragment_breaking_news"
+        tools:layout="@layout/fragment_breaking_news" >
+        <action
+            android:id="@+id/action_breaking_News_to_articleFragment2"
+            app:destination="@id/articleFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@animator/nav_default_pop_exit_anim"
+            />
+    </fragment>
+</navigation>
