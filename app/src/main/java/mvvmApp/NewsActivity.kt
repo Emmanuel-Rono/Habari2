@@ -1,4 +1,4 @@
-package com.example.habari2.ui
+package mvvmApp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -16,6 +16,18 @@ class NewsActivity : AppCompatActivity() {
         val navHostFragment=supportFragmentManager.findFragmentById(R.id.NavHostContainer) as NavHostFragment
         navController=navHostFragment.navController
         setupActionBarWithNavController(navController)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

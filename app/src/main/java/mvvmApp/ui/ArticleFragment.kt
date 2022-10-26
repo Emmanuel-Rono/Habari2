@@ -1,4 +1,4 @@
-package com.example.habari2.ui.fragments
+package mvvmApp
 
 import androidx.fragment.app.Fragment
 import com.example.habari2.R
@@ -8,4 +8,5 @@ class articleFragment : Fragment(R.layout.fragment_article) {
 
 
     }
+
 

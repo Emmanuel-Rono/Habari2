@@ -6,7 +6,7 @@
     app:startDestination="@id/breaking_News">
     <fragment
         android:id="@+id/savedNews"
-        android:name="com.example.habari2.ui.fragments.SavedNews"
+        android:name="mvvmApp.ui.SavedNews"
         android:label="SavedNews" >
         <action
             android:id="@+id/action_savedNews_to_articleFragment"
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/search_News"
-        android:name="com.example.habari2.ui.fragments.Search_News"
+        android:name="mvvmApp.ui.Search_News"
         android:label="Search_News" >
         <action
             android:id="@+id/action_search_News_to_articleFragment"
@@ -27,12 +27,12 @@
     </fragment>
     <fragment
         android:id="@+id/articleFragment"
-        android:name="com.example.habari2.ui.fragments.articleFragment"
+        android:name="mvvmApp.articleFragment"
         android:label="fragment_article"
         tools:layout="@layout/fragment_article" />
     <fragment
         android:id="@+id/breaking_News"
-        android:name="com.example.habari2.ui.fragments.Breaking_News"
+        android:name="mvvmApp.ui.Breaking_News"
         android:label="fragment_breaking_news"
         tools:layout="@layout/fragment_breaking_news" >
         <action
