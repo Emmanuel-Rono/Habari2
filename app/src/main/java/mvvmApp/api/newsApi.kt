@@ -26,8 +26,8 @@ interface newsApi
     @GET("v2/everything")
 
     suspend fun searchnews(
-        @Query("country")
-        countrycode:String="us",
+        @Query("q")
+        searchquery:String,
         @Query("page")
         pageNumber:Int =1,
         @Query("apiKey")
