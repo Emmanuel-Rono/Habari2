@@ -1,7 +1,6 @@
 package mvvmApp.api
 
-import android.provider.Contacts.SettingsColumns.KEY
-import mvvmApp.NewsResponse
+import mvvmApp.models.NewsResponse
 import mvvmApp.ui.Constants.Companion.API_KEY
 import retrofit2.Response
 import retrofit2.http.GET

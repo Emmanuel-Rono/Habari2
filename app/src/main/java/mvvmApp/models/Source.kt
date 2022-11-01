@@ -1,4 +1,4 @@
-package mvvmApp
+package mvvmApp.models
 
 data class Source(
     val id: String,

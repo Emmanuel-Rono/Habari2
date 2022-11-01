@@ -4,11 +4,13 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import mvvmApp.Article
+import androidx.room.TypeConverters
+import mvvmApp.models.Article
 @Database(
     entities =[Article::class],
 version=1
 )
+@TypeConverters(Converters::class)
 abstract  class ArticleDatabase: RoomDatabase() {
     abstract val getDao: articleDao
     //Instance of an database
@@ -21,15 +23,16 @@ abstract  class ArticleDatabase: RoomDatabase() {
         fun getInstance(context: Context): ArticleDatabase {
             synchronized(this) {
                 var instance = INSTANCE
-
                 if (instance == null) {
                     instance = Room.databaseBuilder(
                         context.applicationContext,
                         ArticleDatabase::class.java,
-                        "articleDatabase"
+                        "ArticleDatabase"
                     )
                         .fallbackToDestructiveMigration()
                         .build()
+
+                    //Initiating the new Instance with the instance
                     INSTANCE = instance
                 }
                 return instance

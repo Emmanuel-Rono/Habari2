@@ -1,5 +1,7 @@
 package mvvmApp
 
+.models
+
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
