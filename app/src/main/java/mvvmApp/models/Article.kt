@@ -1,9 +1,8 @@
-package mvvmApp
-
-.models
+package mvvmApp.models
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import okio.Source
 
 
 @Entity(
