@@ -13,6 +13,7 @@ import com.bumptech.glide.Glide
 import com.example.habari2.R
 import mvvmApp.models.Article
 
+
 class NewsAdapter:RecyclerView.Adapter<NewsAdapter.viewHolder> ()
 {
     private val diffUtil=object: DiffUtil.ItemCallback<Article>() {
@@ -46,21 +47,22 @@ class NewsAdapter:RecyclerView.Adapter<NewsAdapter.viewHolder> ()
                 )
             )
         }
+    override fun getItemCount(): Int {
+        return differ.currentList.size
 
+    }
         override fun onBindViewHolder(holder: viewHolder, position: Int) {
             //get current article
             val currentarticle = differ.currentList[position]
             // so we can reference our views
             holder.itemView.apply {
-
-                Glide.with(this).load(currentarticle.urlToImage).into(.image)
-
+                Glide.with(this).load(currentarticle.urlToImage).into(holder.image)
             }
+            holder.text1.text=currentarticle.source.toString()
+            holder.text2.text=currentarticle.title
+            holder.text3.text=currentarticle.description
+            holder.text4.text=currentarticle.publishedAt
 
-        }
-
-        override fun getItemCount(): Int {
-            return differ.currentList.size
 
         }
 
