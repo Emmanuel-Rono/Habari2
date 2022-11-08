@@ -8,9 +8,8 @@ import retrofit2.http.Query
 
 interface newsApi
 {
-    //To get all the breaing news from the API
+    //To get all the breaking news from the API
     @GET("v2/top-headlines")
-
     suspend fun getBreakingnews(
         @Query("country")
         countrycode:String="us",
@@ -21,9 +20,8 @@ interface newsApi
     ):Response<NewsResponse>
     //Above function should return A RESPONSE OF TYPE NewsResponse
 
-    //To get all the breaing news from the API
+    //To get all the breaking news from the API
     @GET("v2/everything")
-
     suspend fun searchnews(
         @Query("q")
         searchquery:String,
