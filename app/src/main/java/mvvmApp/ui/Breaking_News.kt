@@ -32,8 +32,6 @@ Breaking_News : Fragment(R.layout.fragment_breaking_news)
             }
         }
         })
-
-
     }
     fun setupRecyclerview() {
         newsAdapter=NewsAdapter()

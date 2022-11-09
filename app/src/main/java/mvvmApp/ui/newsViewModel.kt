@@ -14,19 +14,18 @@ class newsViewModel( val newsRepository: NewsRepository
 
     val breakingNews: MutableLiveData<Resource<NewsResponse>> = MutableLiveData()
     val newsPage = 1
-    fun getBreakingNews(countrycode:String)=viewModelScope.launch {
-      breakingNews.postValue(Resource.Loading())
-        val response=newsRepository.getBreakingNews(countrycode,newsPage)
-
+    fun getBreakingNews(countrycode: String) = viewModelScope.launch {
+        breakingNews.postValue(Resource.Loading())
+        val response = newsRepository.getBreakingNews(countrycode, newsPage)
+        breakingNews.postValue(handleBreakingNews(response))
     }
-private fun handleBreakingNews (response:Response<NewsResponse>): Resource.Success<NewsResponse> {
-if (response.isSuccessful)
-{
-    response.body()?.let { resultresponse ->
-        return Resource.Success(resultresponse)
+    private fun handleBreakingNews(response: Response<NewsResponse>) :Resource<NewsResponse>{
+        if (response.isSuccessful) {
+            response.body()?.let { resultresponse ->
+                return Resource.Success(resultresponse)
+            }
+        }
+        return Resource.Error(response.message())
     }
 }
 
-}
-
-}y
