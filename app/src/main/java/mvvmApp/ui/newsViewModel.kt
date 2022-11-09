@@ -28,7 +28,7 @@ if (response.isSuccessful)
         return Resource.Success(resultresponse)
     }
 }
-    return Resource.Error(response.message())
+
 }
 
 }
