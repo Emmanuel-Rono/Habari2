@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.habari2.R
 import mvvmApp.Adapters.NewsAdapter
+import mvvmApp.NewsActivity
 import mvvmApp.util.Resource
 
 class
@@ -18,7 +19,7 @@ Breaking_News : Fragment(R.layout.fragment_breaking_news)
     lateinit var newsAdapter:NewsAdapter
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewmodel=(activity as Breaking_News).viewmodel
+        viewmodel=(activity as NewsActivity).viewModel
         setupRecyclerview()
         viewmodel.breakingNews.observe(viewLifecycleOwner, Observer { response
         -> when(response){

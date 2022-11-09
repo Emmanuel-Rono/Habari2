@@ -19,9 +19,7 @@ class newsViewModel( val newsRepository: NewsRepository
         val response=newsRepository.getBreakingNews(countrycode,newsPage)
 
     }
-private fun handleBreakingNews (response:Response<NewsResponse>): Resource.Success<NewsResponse>
-
-{
+private fun handleBreakingNews (response:Response<NewsResponse>): Resource.Success<NewsResponse> {
 if (response.isSuccessful)
 {
     response.body()?.let { resultresponse ->
@@ -31,4 +29,4 @@ if (response.isSuccessful)
 
 }
 
-}
+}y

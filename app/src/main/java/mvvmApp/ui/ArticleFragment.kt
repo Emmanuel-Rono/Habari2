@@ -14,7 +14,7 @@ class articleFragment : Fragment(R.layout.fragment_article)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewmodel=(activity as Breaking_News).viewmodel
+        viewmodel=(activity as NewsActivity).viewModel
     }
 }
 
