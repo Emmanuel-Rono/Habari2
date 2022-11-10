@@ -7,6 +7,8 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class RetrofitInstance {
+    //Companion Object can be called without having an instanc of it
+    //
     companion object {
         private val retrofit by lazy {
             //lazy ensure that this class will not be instantiated
@@ -16,7 +18,8 @@ class RetrofitInstance {
             //client=Network Client
             val client = OkHttpClient.Builder()
                 .addInterceptor(logging).build()
-            //Builder class uses the Builder API to allow defining the URL end point for the HTTP operations
+            //Builder class uses the Builder API to allow defining
+            // the URL end point for the HTTP operations
             // //and finally build a new Retrofit instance.
             Retrofit.Builder()
                 .baseUrl(BASE_URL)
@@ -25,7 +28,7 @@ class RetrofitInstance {
         }
     val api by lazy{
             retrofit.create(newsApi::class.java)
-        }
+        cd}
     }
 
 }

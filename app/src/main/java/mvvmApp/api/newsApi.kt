@@ -5,10 +5,16 @@ import mvvmApp.ui.Constants.Companion.API_KEY
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
+//This interface defines how, retrofit talks to the web server using
+//HTTP request
 
 interface newsApi
 {
     //To get all the breaking news from the API
+    //use get to tell Retrofit tht this is a get request and
+    // specifiy an endpoint ** v2/top-headlines
+    // When the  * getBreakingNews() method is invoked,
+    // Retrofit appends the endpoint photos to the base URL
     @GET("v2/top-headlines")
     suspend fun getBreakingnews(
         @Query("country")

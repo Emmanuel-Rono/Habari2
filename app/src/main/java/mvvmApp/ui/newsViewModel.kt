@@ -27,5 +27,6 @@ class newsViewModel( val newsRepository: NewsRepository
         }
         return Resource.Error(response.message())
     }
+
 }
 

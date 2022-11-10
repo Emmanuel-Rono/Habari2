@@ -52,7 +52,8 @@ Breaking_News : Fragment(R.layout.fragment_breaking_news)
     fun showprogressbar()
     {
     val progressBar= view?.findViewById<ProgressBar>(R.id.progressBar)
-        if (progressBar != null) {
+        if (progressBar != null)
+        {
             progressBar.visibility=View.INVISIBLE
         }
 }
