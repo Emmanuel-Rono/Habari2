@@ -28,7 +28,7 @@ class RetrofitInstance {
         }
     val api by lazy{
             retrofit.create(newsApi::class.java)
-        cd}
+        }
     }
 
 }
